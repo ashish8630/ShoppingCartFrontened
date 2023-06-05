@@ -8,8 +8,7 @@ import axios from "axios";
 const Dealer = () => {
   const [showForm, setShowForm] = useState(false);
   const [name, setName] = useState("");
-  const [imageURL, setImageURL] = useState("");
-  // const [imageFile, setImageFile] = useState("");
+  const [imageFile, setImageFile] = useState(null);
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(0);
   const [stockQuantity, setStockQuantity] = useState(0);
@@ -40,13 +39,12 @@ const Dealer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`http://localhost:8081/api/items/`, {
+      .post(`http://localhost:8081/api/items/?image=${imageFile}`, {
         name: name,
         description: description,
         price: price,
         stockQuantity: stockQuantity,
         userId: userId,
-        imageUrl: imageURL,
         categoryId: categoryId
       })
       .then((res) => {
@@ -54,7 +52,7 @@ const Dealer = () => {
         setUseEffectReload(!useEffectReload);
       });
     setName("");
-    setImageURL("");
+    setImageFile(null);
     setDescription("");
     setPrice(0);
     setStockQuantity(0);
@@ -111,21 +109,23 @@ const Dealer = () => {
                     onChange={(e) => setName(e.target.value)}
                   />
                 </div>
-                <div className="input-group">
+                {/* <div className="input-group">
                   <label>Image URL:</label>
                   <input
                     type="text"
                     value={imageURL}
                     onChange={(e) => setImageURL(e.target.value)}
                   />
-                </div>
-                {/* <div className="input-group">
+                </div> */}
+                
+                <div className="input-group">
                   <label>Image:</label>
                   <input
-                    type="file"
-                    onChange={(e) => setImageFile(e.target.files[0])}
-                  />
-                </div> */}
+        type="file"
+        name="image"
+        onChange={(e)=>setImageFile(e.target.value)}
+      />
+                </div>
                 <div className="input-group">
                   <label>Category:</label>
                   <select
@@ -176,7 +176,7 @@ const Dealer = () => {
           <div className="productList">
             {filteredProducts.map((product, index) => (
               <div key={product.id} className="items">
-                <img src={product.imageUrl} />
+                <img src="{product.imageURL}" alt="alt" />
                 <h3>{product.name}</h3>
                 <h3>{product.description}</h3>
                 <p>{product.stockQuantity}</p>

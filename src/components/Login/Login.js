@@ -1,7 +1,8 @@
-import React, { useState ,useContext} from "react";
+import React, { useState ,useContext,useEffect} from "react";
 import "./Login.css";
 import axios from 'axios';
 import  ItemContext  from "../../Context/ItemContext";
+import jwtDecode from 'jwt-decode';
 
 
 const Login = () => {
@@ -89,7 +90,48 @@ const Login = () => {
     setShowRegisterForm(false);
     setShowDealerForm(false);
   };
+  useEffect(() => {
+    /* global google */
+    const onGoogleScriptLoad = () => {
+      google.accounts.id.initialize({
+        client_id:
+          "946965422673-l41tegruelb9vqb1q6iqrpaf0ha7vnvh.apps.googleusercontent.com",
+        callback: handleLoginApi,
+      });
+      google.accounts.id.renderButton(document.getElementById("LoginButton"), {
+        theme: "outline",
+        size: "large",
+        type: "standard",
+      });
+    };
+    const script = document.createElement("script");
+    script.src = "https://accounts.google.com/gsi/client";
+    script.onload = onGoogleScriptLoad;
+    document.body.appendChild(script);
+  }, []);
+  const handleLoginApi = (response) => {
+    // console.log(response.credential);
+    const decodedToken = jwtDecode(response.credential);
+    const email = decodedToken.email;
+    console.log(email);
+    axios.get(`http://localhost:8081/api/user/userByEmail/${email}`)
+          .then((res)=>{
+            console.log(res);
+          if(res.data.role != null){
+              console.log(res.data.role);
+              updateIsAuthenciated(true);
+              updateUserRole(res.data.role);
+              updateUserName(res.data.name);
+              updateUserId(res.data.userId);
+              console.log(isAuthenciated)   
+              }     else {
+                alert("Please Register!!");
+              }
 
+          });
+
+
+  }
   return (
     <div className="Container">
       <div className="sellerContainer">
@@ -117,6 +159,7 @@ const Login = () => {
             SignUp
           </button>
         </div>
+        <div id="LoginButton"></div>
       </form>
 
 
