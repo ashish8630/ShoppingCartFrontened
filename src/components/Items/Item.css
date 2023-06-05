@@ -1,0 +1,147 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-icon {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.cart-icon {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+
+.view-toggle button {
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* margin-left: 30px; */
+}
+
+.items-container{
+  padding: 20px;
+  margin-left: 70px;
+}
+
+.items-container.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 40px;
+  width:85vw;
+}
+
+.items-container.grid .item {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  /* background-color: #ece7e7; */
+
+}
+
+.items-container.grid > * {
+  margin-bottom: 20px; /* Optional: Add some bottom margin between items */
+}
+
+
+
+
+
+.items-container.list .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  /* background-color: #f8f2f2; */
+  margin-right:50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.item img {
+  width: 150px;       
+  height: 150px;      
+  object-fit: cover;   
+  margin-bottom: 10px;  
+}
+
+.item h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.item p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.item button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .pagination button {
+    background-color: #eee;
+    color: #333;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .total-items{
+    margin-left: 30px;
+    font-size: 0.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-bottom: 20px;
+    margin-top:20px;
+  }
+
+  .total-items h1,p{
+    font-family: cursive;
+  }
+
+  .total-items p{
+    font-family: cursive;
+    font-size: 1rem;
+  }

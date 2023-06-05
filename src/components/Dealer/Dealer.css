@@ -1,0 +1,109 @@
+.dealerContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+
+  .registerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .addProduct{
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  
+  .input-group {
+    width: 30vw;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 15px auto;
+  }
+
+  .input-group label {
+    font-size: 18px;
+    padding-top: 10px;
+    font-weight: 500;
+  } 
+  
+  .input-group input {
+    width: 90%;
+    padding:5px 20px;
+    font-size: 17px;
+    border: 1px solid lightgrey;
+  }
+  
+
+  
+
+  /* .register-forms input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+  } */
+  
+  .register-forms button {
+    width: 86%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .register-forms h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .submit-button{
+    margin-bottom: 10px;
+    margin-left: 40px;
+  }
+
+  .delete-icon{
+    padding: 0px 10px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .myProducts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.productList{
+  margin-right: 9vw;
+}
+ .items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80vw;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-right: 30px;
+}
+
+.searchContainer input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}

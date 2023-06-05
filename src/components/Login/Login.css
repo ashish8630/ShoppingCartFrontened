@@ -1,0 +1,121 @@
+
+
+.sellerContainer{
+  border-right: solid 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  padding: 40px;
+}
+
+.sellerContainer h1{
+  font-size: 48px;
+}
+
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background-color: #9b9595; */
+  background: linear-gradient(45deg, rgb(133, 137, 132), white);
+
+}
+
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.login-form input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.sellerButton{
+  width: 48%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.login-form button {
+  margin-left: 10px;
+  width: 48%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.register-form input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.register-form button {
+  width: 86%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.register-form h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+
+
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .closeButton:hover {
+    color: #ff0000;
+  }
+  

@@ -1,0 +1,199 @@
+
+
+.myCart{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  margin-left: 9vw;
+  margin-right:30px;
+  box-shadow: rgba(0, 0, 0, 0.137) 0px 10px 20px;
+  }
+
+  .countHandler{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .countHandler input{
+    width:15px
+    }
+    .countHandler button{
+      width:20px
+      }
+  
+  .items img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+
+  
+  .items h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .items p {
+    margin-bottom: 5px;
+  }
+  
+  .items-price {
+    font-weight: bold;
+  }
+  
+
+  .total{
+    margin-left: 75%;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    padding: 20px;
+  }
+
+  .total h3{
+    margin-bottom: 10px;
+  }
+
+  .total button{
+    width:10vw
+  }
+
+
+ 
+  .input-group {
+    width: 30vw;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 15px auto;
+  }
+
+  .input-group label {
+    font-size: 18px;
+    padding-top: 10px;
+    font-weight: 500;
+  } 
+  
+  .input-group input {
+    width: 90%;
+    padding:5px 20px;
+    font-size: 17px;
+    border: 1px solid lightgrey;
+  }
+  
+  
+  .detail-form button {
+    width: 66%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 20%;
+    margin-bottom: 10px;
+  }
+  
+  .detail-form h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .submit-button{
+    margin-bottom: 10px;
+    margin-left: 40px;
+  }
+
+  .delete-icon{
+    padding: 0px 10px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .delete-icon1{
+    padding: 0px 10px;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    left:60vw;
+    /* top:20px; */
+  }
+
+
+  .popup-box{
+    background-color: white;
+    width: 33vw;
+  }
+
+  .popup-box h3{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+    border-bottom: 2px solid black;
+    /* background-color: #333; */
+    color: rgb(6, 6, 6);
+  }
+
+  .addressContainer{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin: 10px 30px;
+  }
+
+  .addressContainer span{
+    margin-top: 40px;
+  }
+
+  .addressContainer p{
+    word-break: break-all;
+  }
+
+  .addAddress{
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background-color:#333;
+    color: #fff;
+    cursor: pointer;
+  }
+
+
+  .placeBtn{
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: #333;
+    cursor: pointer;
+    color: #fff;
+    /* font-size: 20px; */
+  }
+
+  .closeButton1{
+    position: relative;
+    bottom: 8vh;
+    left: 30vw;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .closeButton1:hover {
+    color: #ff0000;
+  }
+  
