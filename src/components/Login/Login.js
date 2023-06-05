@@ -90,12 +90,13 @@ const Login = () => {
     setShowRegisterForm(false);
     setShowDealerForm(false);
   };
+
   useEffect(() => {
     /* global google */
     const onGoogleScriptLoad = () => {
       google.accounts.id.initialize({
         client_id:
-          "946965422673-l41tegruelb9vqb1q6iqrpaf0ha7vnvh.apps.googleusercontent.com",
+          "367758440951-o421qj9mtpot735vhdsfn5hucrb4hbsc.apps.googleusercontent.com",
         callback: handleLoginApi,
       });
       google.accounts.id.renderButton(document.getElementById("LoginButton"), {
@@ -109,6 +110,7 @@ const Login = () => {
     script.onload = onGoogleScriptLoad;
     document.body.appendChild(script);
   }, []);
+
   const handleLoginApi = (response) => {
     // console.log(response.credential);
     const decodedToken = jwtDecode(response.credential);

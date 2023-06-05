@@ -12,7 +12,7 @@ const Orders = () => {
 
 
     useEffect(()=>{
-        axios.get(`http://localhost:8081/api/order/`)
+        axios.get(`http://localhost:8081/api/order/notDelivered/${userId}`)
         .then((res)=>{
           console.log(res.data)
           setorderList(res.data);
@@ -38,7 +38,7 @@ const Orders = () => {
       {orderList.map((order) => (
   <div key={order.orderId} className="orderContainer">
     <div className="orderHeader">
-    <h3>Order Date: 4th June 2023</h3>
+    <h3>Order Date: {order.createdDate}</h3>
     <p>Total Price: ${order.total}</p>
     <MdDelete
       className="delete-icon"

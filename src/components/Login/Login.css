@@ -119,3 +119,9 @@
     color: #ff0000;
   }
   
+  #LoginButton{
+    position: fixed;
+    top:10%;
+    left: 80%;
+    border: 3px solid #333;
+  }
